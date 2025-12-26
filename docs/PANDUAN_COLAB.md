@@ -88,40 +88,48 @@ Jika bekerja dalam tim:
 
 ---
 
-## 3. Download Dataset
+## 3. Download Dataset (OTOMATIS!)
 
-### 3.1 Sumber Dataset
+### 3.1 Gunakan Notebook Download Otomatis
 
-Dataset iFood 2019 dapat diunduh dari:
-- **Official**: https://github.com/karansikka1/iFood_2019
-- **Kaggle**: https://www.kaggle.com/c/ifood-2019-fgvc6/data
+**CARA MUDAH**: Cukup jalankan notebook `00_download_dataset.ipynb`!
 
-### 3.2 Upload ke Google Drive
+1. Buka [Google Colab](https://colab.research.google.com)
+2. Buka notebook dari GitHub: `deftorch/alexnet-ifood2019`
+3. Pilih `notebooks/00_download_dataset.ipynb`
+4. Jalankan semua cell (`Runtime → Run all`)
+5. Tunggu ~20-30 menit (download + ekstrak)
+6. Selesai! Dataset otomatis tersimpan di Google Drive
 
-1. Download dataset (~100GB)
-2. Extract file-file berikut:
-   - `train_images/` (folder berisi gambar training)
-   - `val_images/` (folder berisi gambar validasi)
-   - `test_images/` (folder berisi gambar test)
-   - `train_info.csv`
-   - `val_info.csv`
-   - `test_info.csv`
-   - `class_list.txt`
-3. Upload ke `My Drive/AlexNet_iFood2019/dataset/`
+### 3.2 Apa yang Di-download?
 
-### 3.3 Verifikasi Dataset
+| File | Size | URL |
+|------|------|-----|
+| Annotations | 3 MB | https://food-x.s3.amazonaws.com/annot.tar |
+| Train Images | 2.3 GB | https://food-x.s3.amazonaws.com/train.tar |
+| Val Images | 231 MB | https://food-x.s3.amazonaws.com/val.tar |
+| Test Images | 548 MB | https://food-x.s3.amazonaws.com/test.tar |
 
-Pastikan struktur benar:
+**Total: ~3.1 GB**
+
+### 3.3 Hasil Setelah Download
+
 ```
 AlexNet_iFood2019/dataset/
-├── train_images/     (berisi ~118.000 gambar)
-├── val_images/       (berisi ~12.000 gambar)
-├── test_images/      (berisi ~28.000 gambar)
+├── train_images/     (~120,000 gambar)
+├── val_images/       (~12,000 gambar)
+├── test_images/      (~28,000 gambar)
 ├── train_info.csv
 ├── val_info.csv
 ├── test_info.csv
 └── class_list.txt
 ```
+
+### 3.4 Download Manual (Alternatif)
+
+Jika ingin download manual:
+- **Official**: https://github.com/karansikka1/iFood_2019
+- **Kaggle**: https://www.kaggle.com/c/ifood-2019-fgvc6/data
 
 ---
 
